@@ -1,0 +1,22 @@
+<html> 
+<head>
+Blog de Anita
+</head> 
+<body> 
+<div>
+<h1><a href="/"> El arte de la fotografía</a></h1> 
+</div>
+{% for publicacion in publicaciones %}
+<div>
+<p> publicado: {{ publicacion.fecha_publicacion }}</p>
+<h2><a href="">{{ publicacion.titulo }}</a></h2>
+<p>{{ publicacion.texto|linebreaksbr }}</p>
+<hr>
+</div>
+{% endfor %}
+<div>
+<h2><a href="">Mi primera publicación</a></h2>
+<p>En esta publicación hablo de la fotografía, su impacto en la historia de la humanidad, sus beneficios, propositos, caracteristicas y tipos y grandes ejemplos de la misma.</p>
+</div>
+</body> 
+</html>

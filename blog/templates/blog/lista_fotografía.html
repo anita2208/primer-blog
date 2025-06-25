@@ -1,0 +1,55 @@
+{% load static %}
+
+<html> 
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&family=Libertinus+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        
+    </head> 
+    <body> 
+        <div class="page-header"></divclass>
+            <h1><a href=""><strong>Blog fotográfico</strong></a></h1>
+            
+        </div>
+        <div><h2><a href=""></a><em>¿Qué es la fotografía?</em></a></h2>
+            <p>La fotografía es una disciplina técnica y artística que consiste en capturar y reproducir imágenes por medio de la acción de la luz proyectada y fijada sobre un medio sensible, ya sea físico o digital.
+            La técnica fotográfica se basa en el principio de la cámara oscura, un instrumento óptico que consta de un compartimento totalmente oscuro con un pequeño agujero en uno de sus extremos, por el cual ingresa la luz y proyecta sobre el fondo imágenes invertidas de lo que se encuentra afuera.
+            Las cámaras fotográficas aplican este mismo principio, con la diferencia de que están dotadas de otros elementos: lentes para afinar el foco, espejos para revertir lo proyectado y una cinta fotosensible (rollo fotográfico) o un sensor digital para captar y registrar las imágenes.
+            Las reproducciones obtenidas tras este proceso se denominan fotografías o fotos. La fotografía actual es el resultado de décadas de perfeccionamiento de la técnica, la calidad óptica y los materiales fotosensibles. Esta tecnología, además, permitió el desarrollo y el progreso de otras técnicas semejantes, como la cinematografía.</p>
+        </div>
+        <div>
+            <h3><em> Algunos íconos de la fotografía</em></h3> 
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for publicacion in fotografia %}
+                        <div class="post">
+                            <div class="date">
+                                <p> publicado: {{ publicacion.fecha_publicacion }}</p>
+                            </div>
+                            <h4>{{ publicacion.nombre_artístico }}</h4>
+                            <p><strong>Nacionalidad:</strong> {{ publicacion.nacionalidad }}</p>
+                            <p><strong>Nacimiento:</strong> {{ publicacion.nacimiento }}</p>
+                            <p><strong>Fallecimiento:</strong> {{ publicacion.fallecimiento }}</p>
+                            <p><strong>Edad:</strong> {{ publicacion.edad }}</p>
+                            <p><strong>Ocupacion:</strong> {{ publicacion.ocupacion }}</p>
+                            <p><strong>Nacionalidad:</strong> {{ publicacion.nacionalidad }}</p>
+                            <p><strong>Estilo:</strong> {{ publicacion.estilo }}</p>
+                            <p><strong>Movimiento:</strong> {{ publicacion.tipo_de_fotografía_o_movimiento }}</p>
+                            <p><strong>Características:</strong> {{ publicacion.características|linebreaksbr }}</p>
+                            <p><strong>Técnicas:</strong> {{ publicacion.tecnicas|linebreaksbr }}</p>
+                            <p><strong>Exposiciones:</strong> {{ publicacion.exposiciones }}</p>
+                            <p><strong>Opinión:</strong> {{ publicacion.opinion_personal|linebreaksbr }}</p>
+                            <p><strong>Fecha_ de_publicacion:</strong> {{ publicacion.fecha_de_publicacion }}</p>
+                            <hr>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>

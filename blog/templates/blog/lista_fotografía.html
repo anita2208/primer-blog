@@ -10,10 +10,11 @@
     </head> 
     <body> 
         <div class="page-header"></divclass>
-            <h1><a href=""><strong>Blog fotográfico</strong></a></h1>
+            <h1><strong>Blog fotográfico</strong></h1>
             
         </div>
-        <div><h2><a href=""></a><em>¿Qué es la fotografía?</em></a></h2>
+        <div>
+            <h2>><em>¿Qué es la fotografía?</em></h2>
             <p>La fotografía es una disciplina técnica y artística que consiste en capturar y reproducir imágenes por medio de la acción de la luz proyectada y fijada sobre un medio sensible, ya sea físico o digital.
             La técnica fotográfica se basa en el principio de la cámara oscura, un instrumento óptico que consta de un compartimento totalmente oscuro con un pequeño agujero en uno de sus extremos, por el cual ingresa la luz y proyecta sobre el fondo imágenes invertidas de lo que se encuentra afuera.
             Las cámaras fotográficas aplican este mismo principio, con la diferencia de que están dotadas de otros elementos: lentes para afinar el foco, espejos para revertir lo proyectado y una cinta fotosensible (rollo fotográfico) o un sensor digital para captar y registrar las imágenes.
@@ -46,6 +47,9 @@
                             <p><strong>Opinión:</strong> {{ publicacion.opinion_personal|linebreaksbr }}</p>
                             <p><strong>Fecha_ de_publicacion:</strong> {{ publicacion.fecha_de_publicacion }}</p>
                             <hr>
+                            <h5><a href="https://www.imogencunningham.com/imogen-cunningham-image-archive/">link</a></h5>
+                            <img src="migrant mother.jpg" alt="Descripción de la imagen">
+
                         </div>
                     {% endfor %}
                 </div>

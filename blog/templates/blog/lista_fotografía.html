@@ -27,7 +27,7 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                    {% for publicacion in fotografia %}
+                    {% for publicacion in Fotografías %}
                         <div class="post">
                             <div class="date">
                                 <p> publicado: {{ publicacion.fecha_publicacion }}</p>
@@ -51,6 +51,7 @@
                             <img src="migrant mother.jpg" alt="Descripción de la imagen">
 
                         </div>
+                        <hr>
                     {% endfor %}
                 </div>
             </div>

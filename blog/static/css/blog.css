@@ -32,9 +32,19 @@ h2 + p {
 }
 h3 {
     font-family: 'Libertinus Mono', monospace;
-    font-size: 24pt;
+    font-size: 32pt;
     font-weight: 700; 
     margin-bottom: 10px;
+}
+.post p, .post div, .post strong {
+    font-family: 'Libertinus Mono', monospace;
+    font-size: 16pt;
+}
+/* Nombre del artista y títulos en publicaciones */
+.nombre-artista {
+    font-family: 'Libertinus Mono', sans-serif;
+    font-size: 30pt;  /* 2x el tamaño normal (16pt x 2) */
+    font-weight: 700;
 }
 .date {
     color: #ffffff;

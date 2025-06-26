@@ -31,10 +31,11 @@ class Fotografía(models.Model):
     características = models.TextField()
     tecnicas = models.TextField()
     exposiciones = models.TextField()
-    opinion_personal = models.TextField()
     fecha_creacion = models.DateTimeField(default=timezone.now)
     hora_creacion = models.DateTimeField(blank=True, null=True)
     fecha_publicacion = models.DateTimeField(default=timezone.now)
+    imagen = models.ImageField(upload_to='imagenes_publicaciones/', null=True, blank=True)
+    nombre_imagen = models.CharField(max_length=200, blank=True, null=True)
 
 
     def __str__(self):
